@@ -6,6 +6,7 @@ class Posts(models.Model):
   body = models.TextField()
   created_at = models.DateTimeField(default=datetime.now, blank=True)
   images = models.ImageField(default='')
+  author = models.CharField(max_length = 200, default='')
 
   def __str__(self):
     return self.title

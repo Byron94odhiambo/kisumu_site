@@ -7,7 +7,7 @@ from .models import Posts
 def index(request):
  
 
-  posts = Posts.objects.all()[:10]
+  posts = Posts.objects.all()[:3]
 
   context = {
     'title': 'Latest Posts',
