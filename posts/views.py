@@ -7,10 +7,10 @@ from .models import Posts
 def index(request):
  
 
-  posts = Posts.objects.all()[:3]
+  posts = Posts.objects.all().order_by('-created_at')[:3]
 
   context = {
-    'title': 'Latest Posts',
+    'title': 'Stay Updated',
     'posts': posts
   }
 
