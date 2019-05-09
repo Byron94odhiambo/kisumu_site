@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Posts
 from .forms import ContactForm
+from django.http import HttpResponseRedirect 
+from django.core.mail import send_mail
+
 
 
 
@@ -10,7 +13,7 @@ def index(request):
   posts = Posts.objects.all().order_by('-created_at')[:3]
 
   context = {
-    'title': 'Stay Updated',
+    'title': 'Latest Posts',
     'posts': posts
   }
 
@@ -27,11 +30,34 @@ def details(request, id):
   return render(request, 'posts/details.html', context)
 
 
-
-
 def contact(request):
-   form_class = ContactForm
 
-   return render(request, 'posts/contact.html', {'form': form_class,})
+  if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # send email code goes here
+            sender_name = form.cleaned_data['first_name']
+            sender_email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            
+            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
+            send_mail(subject, message, sender_email, ['odhiambobyron39@gmail.com'])
+            
+  else:
+        form = ContactForm()
+   
 
+  return render(request, 'posts/contact.html', {'form': form,})
 
+  
+def news(request):
+ 
+
+  posts = Posts.objects.all().order_by('-created_at')
+
+  context = {
+    'title': 'Stay Updated',
+    'posts': posts
+  }
+
+  return render(request, 'posts/news.html', context)
