@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
 from .models import Posts
+from .forms import ContactForm
+
 
 
 def index(request):
@@ -17,6 +17,7 @@ def index(request):
   return render(request, 'posts/index.html', context)
 
 def details(request, id):
+
   post = Posts.objects.get(id=id)
 
   context = {
@@ -24,3 +25,13 @@ def details(request, id):
   }
 
   return render(request, 'posts/details.html', context)
+
+
+
+
+def contact(request):
+   form_class = ContactForm
+
+   return render(request, 'posts/contact.html', {'form': form_class,})
+
+

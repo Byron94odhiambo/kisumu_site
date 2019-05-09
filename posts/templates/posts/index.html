@@ -1,6 +1,5 @@
 {% extends 'posts/layout.html' %}
 {% load static%}
-
 <link rel="stylesheet" type="text/css" href="{% static 'posts/main.css' %}">
 
 {% block content %}
@@ -46,9 +45,19 @@
 </div>
 </div>
 
+<div class="jumbotron">
+
+  <h3> STAY UPDATED FORM</h3>
+</div>
+
+<div class="jumbotron">
+
+  <h3> POPULAR SERVICES-TENDERS DOWNLOADS PROJECTS E-RECRUITMENT COUNTY-FORUM</h3>
+</div>
+
 
 <div class="container">
-<h3 class="center-align red lighten-3">{{title}}</h3>
+<h3 class="text-primary">{{title}}</h3>
 
 <div class="card-deck">
   {% for post in posts %}
@@ -59,23 +68,33 @@
       <p class="card-text">{{post.body}}</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">{{post.created_at}} <p>by</p> {{post.author}}</small>
+      <small class="text-muted">{{post.created_at}} <p>by
+        <br>
+      </p> {{post.author}}</small>
     </div>
   </div>
+
+  
+
 
   {% endfor %}
   </div>
 </div>
 
+<button type="button" class="btn btn-primary">Read More</button>
+
+<div class="jumbotron" style="margin-top:50px;">
+
+  <h3> UPCOMING EVENTS</h3>
+</div>
 
 
+<div class="jumbotron">
+  <h1>COUNTY GOVERNMENT</h1>
+</div>
 
-<div class="container"></div>
+<div class="jumbotron">
 
-
-<div class=" jumbotron text-center" style = margin-top:100px;>
-
-  <a style="display:block" class="center-align" href="/admin">Admin Login</a>
-
+  <h3> footer</h3>
 </div>
 {% endblock %}
