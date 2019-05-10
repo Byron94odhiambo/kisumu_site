@@ -56,7 +56,7 @@ def news(request):
   posts = Posts.objects.all().order_by('-created_at')
 
   context = {
-    'title': 'Stay Updated',
+    'title': 'news/events',
     'posts': posts
   }
 
