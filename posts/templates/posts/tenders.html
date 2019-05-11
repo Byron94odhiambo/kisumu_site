@@ -1,0 +1,23 @@
+{% extends 'posts/layout.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'posts/main.css' %}">
+{% block content %}
+
+<div class ="grid-container" style = margin-top:300px;>
+  {% for advert in adverts %}
+
+<div class="card">
+  <div class="bg-img">
+  <div class="content">
+    <h4>{{adverts.ad_title}}</h4>
+    <p>{{adverts.ad_body}}</p>
+    <p>{{adverts.ad_created_at}}</p>
+    <br>
+     <button>Readmore</button> </div>
+</div>
+</div>
+
+
+  {%endfor%}
+
+  {% endblock %}

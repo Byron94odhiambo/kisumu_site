@@ -14,3 +14,18 @@ class Posts(models.Model):
     
   class Meta:
     verbose_name_plural = "Posts"
+
+class Adverts(models.Model):
+  ad_title = models.CharField(max_length=200)
+  ad_body = models.TextField()
+  ad_created_at = models.DateTimeField(default=datetime.now, blank=True)
+
+  def __str__(self):
+    return self.ad_title
+    
+  class Meta:
+    verbose_name_plural = "Adverts"  
+
+
+
+  

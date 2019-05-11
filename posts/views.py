@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Posts
+from .models import Posts, Adverts
 from .forms import ContactForm
 from django.http import HttpResponseRedirect 
 from django.core.mail import send_mail
@@ -61,3 +61,16 @@ def news(request):
   }
 
   return render(request, 'posts/news.html', context)
+
+
+def tenders(request):
+ 
+
+     adverts = Adverts.objects.all().order_by('-ad_created_at')
+
+     context = {
+           'title': 'STAY UPDATED',
+           'adverts': adverts
+           }
+
+     return render(request, 'posts/tenders.html', context)
