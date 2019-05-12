@@ -1,10 +1,16 @@
 {% extends 'posts/layout.html' %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'posts/main.css' %}">
-{% block content %}
 
-<div class ="grid-container" style = margin-top:300px;>
+
+{% block content %}
+<h1 div class ="text-muted" style = margin-top:100px;>{{title}}</h1>
+
+<div class ="grid-container" style = margin-top:10px;>
+  
   {% for advert in adverts %}
+
+  
 
 <div class="card">
   <div class="bg-img">
