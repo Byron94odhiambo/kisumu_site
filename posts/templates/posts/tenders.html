@@ -6,7 +6,7 @@
 {% block content %}
 <h1 div class ="text-muted" style = margin-top:100px;>{{title}}</h1>
 
-<div class ="grid-container" style = margin-top:10px;>
+<div class ="grid-container" style = margin-top:20px;>
   
   {% for advert in adverts %}
 
@@ -15,9 +15,9 @@
 <div class="card">
   <div class="bg-img">
   <div class="content">
-    <h4>{{adverts.ad_title}}</h4>
-    <p>{{adverts.ad_body}}</p>
-    <p>{{adverts.ad_created_at}}</p>
+    <h4>{{advert.ad_title}}</h4>
+    <p>{{advert.ad_body}}</p>
+    <p>{{advert.ad_created_at}}</p>
     <br>
      <button>Readmore</button> </div>
 </div>
@@ -25,5 +25,16 @@
 
 
   {%endfor%}
+
+
+  <div class = "container">
+    <ul class="pagination pagination-lg">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div>
 
   {% endblock %}

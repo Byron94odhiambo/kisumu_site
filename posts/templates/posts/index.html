@@ -45,18 +45,56 @@
 </div>
 </div>
 
-<div class="jumbotron">
 
-  <h3> STAY UPDATED FORM</h3>
+<div class="jumbotron">
+  <h4 class = "text-primary">POPULAR SERVICES</h4>
+  <div class="row">
+      <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+              <div class="service_icon">
+                  <i class="fa fa-weibo"></i>
+              </div>
+              <h3>TRADE LICENSE</h3>
+              <p></p>
+          </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+              <div class="service_icon">
+                  <i class="fa fa-weibo"></i>
+              </div>
+              <h3>PUBLIC HEALTH LICENSE</h3>
+              <p></p>
+          </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+              <div class="service_icon">
+                  <i class="fa fa-apple"></i>
+              </div>
+              <h3>LIQOUR LICENSE</h3>
+              <p></p>
+          </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+          <div class="service_box">
+              <div class="service_icon">
+                  <i class="fa fa-sort-alpha-desc"></i>
+              </div>
+              <h3>CONSTRUCTION PERMIT</h3>
+              <p></p>
+          </div>
+      </div>
+  </div>
 </div>
 
-<div class="jumbotron">
-
-  <h3> POPULAR SERVICES-TENDERS DOWNLOADS PROJECTS E-RECRUITMENT COUNTY-FORUM</h3>
+<div class = "container">
+  <h4 class = "text-primary text-left">Latest Posts</h4>
 </div>
 
 
 <div class ="grid-container" style = margin-left:200px;>
+  
   {% for post in posts %}
 
 <div class="card">
@@ -85,12 +123,44 @@
 </div>
 
 
-<div class="jumbotron">
-  <h1>COUNTY GOVERNMENT</h1>
+<div class="container">
+  <h3 class = "text-center text-primary">KISUMU COUNTY GOVERNMENT</h3>
+
+
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'posts/images/pic.png' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Prof. Anyang Nyong'o</h5><br>
+        <h6 class = "text-primary">GOVERNER</h6>
+
+        <p class="card-text">I am deeply honoured and humbled by the solemn dignity I have been accorded by the people of Kisumu.
+           I assure you all, that I shall uphold the highest traditions of this exalted position,
+            and will work for the principles that are sacred to our democratic values. I call upon you,
+             the people of Kisumu County,
+              including the people of cosmopolitan Kisumu City - an inclusive city for all the tribes of Kenya and all the nationalities of the world, 
+             to rise above the misery that has befallen us, and come together,
+           determined to build this county for a better future for our children and our children's children.</p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img class="card-img-top" src="{% static 'posts/images/pic.png' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Mathews Owili</h5><br>
+        <h6 class = "text-primary">DEPUTY-GOVERNER</h6>
+        <p class="card-text">I would like to thank the Lord God almighty, in whom we live and move and have our being.
+           Without Him the world is but an incomprehensible set up. But with Him the fruits of our labour is blessed,
+            our desires and intentions are made purposeful and our lives most rewarding.
+             He was, is and will always be supreme during elections and on ordinary days. It does not matter how many times we try to cheat him,
+           to hide from him and even to try and "hack" him. When all is said and done,
+            he will finally catch up with us when the Truth catches up with us.</p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="jumbotron">
 
-  <h3> footer</h3>
-</div>
 {% endblock %}
