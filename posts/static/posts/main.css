@@ -9,8 +9,10 @@
 width: 1100px;
 }
 body{
-
-  background-color:white;
+  
+ /* background-image:url('images/night.jpeg') ;*/
+  background-color: #A03EF7;
+  background-attachment: fixed;
 
 }
 .card {
