@@ -56,6 +56,7 @@
 
     
   </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
   <div class = "container" style=background:black;>
 
@@ -68,18 +69,18 @@
     <!-- Grid row-->
     <div class="row text-center d-flex justify-content-center pt-5 mb-3">
 
-      <!-- Grid column -->
+      <!-- Grid column 
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
           <a href="#!">About us</a>
         </h6>
       </div>
-      <!-- Grid column -->
+       Grid column -->
 
       <!-- Grid column -->
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">services</a>
+          <a href="/posts/tenders">services</a>
         </h6>
       </div>
       <!-- Grid column -->
@@ -87,7 +88,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">events</a>
+          <a href="/posts/news">events</a>
         </h6>
       </div>
       <!-- Grid column -->
@@ -95,7 +96,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Help</a>
+          <a href="/posts/contact">Help</a>
         </h6>
       </div>
       <!-- Grid column -->
@@ -103,7 +104,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="#!">Contact</a>
+          <a href="/posts/contact">Contact</a>
         </h6>
       </div>
       <!-- Grid column -->
@@ -183,6 +184,24 @@
 </footer>
 <!-- Footer -->
   </div>
+  <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
 
 
 
