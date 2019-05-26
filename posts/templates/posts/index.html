@@ -124,16 +124,18 @@ SERVICES</pre></h4></div>
     <p>{{post.author}}</p>
     <p>{{post.created_at}}</p>
     <br>
-     <button>Readmore</button> </div>
+    <a href="/posts/details/{{post.id}}" class="btn btn-info" role="button">Readmore</a>
+    </div>
 </div>
 </div>
-
-
-  
 
 
   {% endfor %}
   </div>
+</div>
+
+<div class = "container" style="padding:50px; margin-right:0px;">
+    <a href="/posts/news" class="btn btn-info" role="button">See More Posts</a>
 </div>
 
 
