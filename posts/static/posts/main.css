@@ -24,7 +24,6 @@ width: 1100px;
   background-size: cover;
   min-height: 180px;
   background-position: center;
-  background-image:url("{{ post.images.url }}");
 }
 
 .content {

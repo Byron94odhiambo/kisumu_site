@@ -6,16 +6,16 @@
 <div class ="grid-container" style = "margin-top:200px;margin-bottom: 50px;">
   {% for post in posts %}
 
-<div class="card">
+<div class="card bg-info">
 <div class= "bg-img">
       <img src="{{ post.images.url }}" alt="{{ post.title }}"width="355" height="200">
   <div class="content">
     
-    <p>{{post.author}}</p>
-    <p>{{post.created_at}}</p>
+    <p style="color: white;">{{post.author}}</p>
+    <p style="color: white;">{{post.created_at}}</p>
     <br>
 
-    <a href="/posts/details/{{post.id}}" class="btn btn-info" role="button">Readmore</a> </div>
+    <a href="/posts/details/{{post.id}}" class="btn btn-primary" role="button">Readmore</a> </div>
 
 </div>
 </div>

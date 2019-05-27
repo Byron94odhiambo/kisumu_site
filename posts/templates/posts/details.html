@@ -1,9 +1,9 @@
 {% extends 'posts/layout.html' %}
 
 {% block content %}
-<h3 class="center-align" style=margin-top:100px;>{{post.title}}</h3>
-<div class ="jumbotron">
-    <img src="{{ post.images.url }}" alt="{{ post.title }}">
+<h3 class="center-align" style="margin-top:100px; color: white;">{{post.title}}</h3>
+<div class ="container" style="padding:20px">
+    <img src="{{ post.images.url }}" alt="{{ post.title }}" max-width="auto" height="200">
 </div>
 <div class="card">
   <div class="card-content">

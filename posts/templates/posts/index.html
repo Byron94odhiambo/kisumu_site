@@ -114,15 +114,15 @@ SERVICES</pre></h4></div>
   
   {% for post in posts %}
 
-<div class="card">
+<div class="card bg-info">
   
   <img src="{{ post.images.url }}" alt="{{ post.title }}" width="330" height="200">
   <div class="content">
     
-    <p>{{post.author}}</p>
+    <h5 style="color: white;">{{post.title}}</h5>
     <p>{{post.created_at}}</p>
     <br>
-    <a href="/posts/details/{{post.id}}" class="btn btn-info" role="button">Readmore</a>
+    <a href="/posts/details/{{post.id}}" class="btn btn-primary" role="button">Readmore</a>
     </div>
   
 </div>  
