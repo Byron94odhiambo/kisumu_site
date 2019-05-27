@@ -7,17 +7,18 @@
   {% for post in posts %}
 
 <div class="card">
-  <div class="bg-img">
+<div class= "bg-img">
+      <img src="{{ post.images.url }}" alt="{{ post.title }}"width="355" height="200">
   <div class="content">
-    <h4>{{post.title}}</h4>
+    
     <p>{{post.author}}</p>
     <p>{{post.created_at}}</p>
     <br>
 
     <a href="/posts/details/{{post.id}}" class="btn btn-info" role="button">Readmore</a> </div>
-</div>
-</div>
 
+</div>
+</div>
 
   {%endfor%}
 

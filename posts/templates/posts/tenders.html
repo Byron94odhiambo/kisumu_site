@@ -4,7 +4,7 @@
 
 
 {% block content %}
-<h1 div class ="text-muted" style = margin-top:100px;>{{title}}</h1>
+<h1 style =" margin-top:100px; color: rgb(240, 245, 247);">{{title}}</h1>
 
 <div class ="grid-container" style = margin-top:20px;>
   
@@ -15,26 +15,16 @@
 <div class="card">
   <div class="bg-img">
   <div class="content">
-    <h4>{{advert.ad_title}}</h4>
+    <h4 style="color:#00BFF3;">{{advert.ad_title}}</h4>
     <p>{{advert.ad_body}}</p>
     <p>{{advert.ad_created_at}}</p>
     <br>
-     <button>Readmore</button> </div>
+     </div>
 </div>
 </div>
 
 
   {%endfor%}
 
-
-  <div class = "container">
-    <ul class="pagination pagination-lg">
-      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    </ul>
-  </div>
 
   {% endblock %}
