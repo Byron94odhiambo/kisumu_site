@@ -2,8 +2,22 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'posts/main.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 {% block content %}
+<style>
+  
+  body {
+  background-image: url("{% static 'posts/images/lake.jpg' %}" );
+  background-repeat: no-repeat;
+  background-size: auto;
+  
+ /* background-color: #00BFF3;*/
+
+  }
+  </style>
+
+  <body>
 
 <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -69,7 +83,7 @@ SERVICES</pre></h4></div>
       <div class="col-md-2 col-sm-6">
           <div class="service_box">
               <div class="service_icon">
-                  <i class="fa fa-weibo"></i>
+                <i class="far fa-address-card"></i>
               </div>
               <h3>TRADE LICENSE</h3>
               <p></p>
@@ -78,7 +92,7 @@ SERVICES</pre></h4></div>
       <div class="col-md-2 col-sm-6">
           <div class="service_box">
               <div class="service_icon">
-                  <i class="fa fa-weibo"></i>
+                <i class="fas fa-ambulance"></i>
               </div>
               <h3>PUBLIC HEALTH LICENSE</h3>
               <p></p>
@@ -87,7 +101,7 @@ SERVICES</pre></h4></div>
       <div class="col-md-2 col-sm-6">
           <div class="service_box">
               <div class="service_icon">
-                  <i class="fa fa-apple"></i>
+                <i class="fas fa-beer"></i>
               </div>
               <h3>LIQOUR LICENSE</h3>
               <p></p>
@@ -96,7 +110,7 @@ SERVICES</pre></h4></div>
       <div class="col-md-2 col-sm-6">
           <div class="service_box">
               <div class="service_icon">
-                  <i class="fa fa-sort-alpha-desc"></i>
+                <i class="fas fa-industry"></i>
               </div>
               <h3>CONSTRUCTION PERMIT</h3>
               <p></p>
@@ -138,47 +152,6 @@ SERVICES</pre></h4></div>
 
 
 
-
-
-<div class="container">
-  <pre style="color:#00BFF3;font-size:30px;text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif;background-color:black;">KISUMU COUNTY
- GOVERNMENT</pre>
-
-
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="{% static 'posts/images/pic.png' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Prof. Anyang Nyong'o</h5><br>
-        <h6 class = "text-primary">GOVERNER</h6>
-
-        <p class="card-text">I am deeply honoured and humbled by the solemn dignity I have been accorded by the people of Kisumu.
-           I assure you all, that I shall uphold the highest traditions of this exalted position,
-            and will work for the principles that are sacred to our democratic values. I call upon you,
-             the people of Kisumu County,
-              including the people of cosmopolitan Kisumu City - an inclusive city for all the tribes of Kenya and all the nationalities of the world, 
-             to rise above the misery that has befallen us, and come together,
-           determined to build this county for a better future for our children and our children's children.</p>
-        <p class="card-text"><small class="text-muted"></small></p>
-      </div>
-    </div>
-    
-    <div class="card">
-      <img class="card-img-top" src="{% static 'posts/images/pic.png' %}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Mathews Owili</h5><br>
-        <h6 class = "text-primary">DEPUTY-GOVERNER</h6>
-        <p class="card-text">I would like to thank the Lord God almighty, in whom we live and move and have our being.
-           Without Him the world is but an incomprehensible set up. But with Him the fruits of our labour is blessed,
-            our desires and intentions are made purposeful and our lives most rewarding.
-             He was, is and will always be supreme during elections and on ordinary days. It does not matter how many times we try to cheat him,
-           to hide from him and even to try and "hack" him. When all is said and done,
-            he will finally catch up with us when the Truth catches up with us.</p>
-        <p class="card-text"><small class="text-muted"></small></p>
-      </div>
-    </div>
-  </div>
-</div>
-
+</body> 
 
 {% endblock %}

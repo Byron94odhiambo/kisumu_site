@@ -10,17 +10,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="{% static 'posts/main.css' %}">
-  <style>
   
-  body {
-  background-image: url("{% static 'posts/images/lake.jpg' %}" );
-  background-repeat: no-repeat;
-  background-size: auto;
-  
- /* background-color: #00BFF3;*/
 
-  }
-  </style>
   
   
   
@@ -38,8 +29,11 @@
     <a class="nav-link text-light font-weight-bold px-3" href="/posts">HOME</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link text-light font-weight-bold px-3" href="/posts/tenders">SERVICES</a>
+    <a class="nav-link text-light font-weight-bold px-3" href="/posts/tenders">TENDERS</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link text-light font-weight-bold px-3" href="{%url 'login'%}" id = nav>SERVICES</a>
+        </li>
     <li class="nav-item">
       <a class="nav-link text-light font-weight-bold px-3" href="#">MINISTRIES</a>
       </li>
@@ -62,6 +56,13 @@
     </div>
     </nav>
   <div class="container">
+    {% if messages %}
+    {% for message in messages %}
+    <div class ="alert alert-{{message.tags}}">
+      {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
     {% block content %}
     {% endblock %}
     <br>

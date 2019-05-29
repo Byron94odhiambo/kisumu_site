@@ -5,3 +5,4 @@ from .models import Posts,  Adverts
 
 admin.site.register(Posts)
 admin.site.register(Adverts)
+admin.site.site_header = 'Administration'

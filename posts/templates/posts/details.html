@@ -1,16 +1,17 @@
 {% extends 'posts/layout.html' %}
 
 {% block content %}
-<h3 class="center-align" style="margin-top:100px; color: white;">{{post.title}}</h3>
+<h3 class="center-align" style="margin-top:100px; color:#00BFF3;background-color: black;padding: 30px" >{{post.title}}</h3>
 <div class ="container" style="padding:20px">
-    <img src="{{ post.images.url }}" alt="{{ post.title }}" max-width="auto" height="200">
+  
+    <img src="{{ post.images.url }}" alt="{{ post.title }}" width="900" height="500">
 </div>
 <div class="card">
-  <div class="card-content">
+  <div class="card-content" style="padding: 30px">
     {{post.body}}
   </div>
 
-  <div class="card-action">
+  <div class="card-action" style="padding: 30px">
     {{post.created_at}}
   </div>
 </div>
