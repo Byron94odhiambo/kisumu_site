@@ -1,6 +1,20 @@
 from django.db import models
 from datetime import datetime
 
+
+
+MINISTRY = [
+    ('AGRIC AND LIVESTOCK', 'Agriculture And Livestock'),
+    ('ENVIRON AND NATURAL RESOURCES', 'Environment And Natural Resources'),
+    ('FINANCE AND ECONOMIC PLANNING', 'Finance And Economic Planning'),
+    ('HEALTH AND SANITATION', 'Health And Sanitaion'),
+    ('PHYSICAL PLANNING AND URBAN DEVELOPMENT', 'Physical Planning And Urban Development'),
+    ('ROAD TRANSPORT AND PUBLIC WORKS', 'Road Transport And Public Works'),
+    ('FINANCE AND ECONOMIC PLANNING', 'Finance And Economic Planning'),
+    ('TOURISM ARTS CULTURE AND SPORT', 'Tourism Arts Culture And Sport.'),
+    ('BUSINESS COOPERATIVES AND MARKETING', 'Business Cooperatives And Marketing'),
+]
+
 class Posts(models.Model):
   title = models.CharField(max_length=200)
   body = models.TextField()
@@ -25,6 +39,8 @@ class Adverts(models.Model):
     
   class Meta:
     verbose_name_plural = "Adverts"  
+
+
 
 
 

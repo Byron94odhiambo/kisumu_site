@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Posts, Adverts
-from .forms import ContactForm
-from django.http import HttpResponseRedirect 
+from .forms import ContactForm, MinistryForm
+from django.http import HttpResponseRedirect, HttpResponse
 from django.core.mail import send_mail
 
 
@@ -72,3 +72,25 @@ def tenders(request):
            }
 
      return render(request, 'posts/tenders.html', context)
+
+
+def ministries(request):
+  if request.method == 'POST':
+        form = MinistryForm(request.POST)
+        if form.is_valid():
+            # send email code goes here
+            sender_name = form.cleaned_data['first_name']
+            sender_email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            
+            message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
+            send_mail(subject, message, sender_email, ['odhiambobyron39@gmail.com'])
+            
+  else:
+        form = MinistryForm()
+
+
+
+def services(request):
+
+  return render(request, 'posts/services.html')

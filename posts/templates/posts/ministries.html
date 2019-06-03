@@ -1,0 +1,15 @@
+{% extends 'posts/layout.html' %}
+{% load crispy_forms_tags %}
+{%block content%}
+
+
+<div class = "container" style = "margin-top:150px;background-color:grey;">
+
+    <h1 style="color:#00BFF3;">MINISTRY AGENCY</h1>
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy}}
+    <button  class= "btn btn-primary" type="submit" style="margin-bottom: 15px;">send message</button>
+</form>
+</div>
+{%endblock%}

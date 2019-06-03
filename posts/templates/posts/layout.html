@@ -19,6 +19,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
+    
     <a href="/posts" class="navbar-brand"><img src="{% static 'posts/images/logo.png' %}" style="width:250px;" ></a>
     <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
     <span class="navbar-toggler-icon"></span>
@@ -32,10 +33,10 @@
     <a class="nav-link text-light font-weight-bold px-3" href="/posts/tenders">TENDERS</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-light font-weight-bold px-3" href="{%url 'login'%}" id = nav>SERVICES</a>
+        <a class="nav-link text-light font-weight-bold px-3" href="{%url 'register'%}" id = nav>SERVICES</a>
         </li>
     <li class="nav-item">
-      <a class="nav-link text-light font-weight-bold px-3" href="#">MINISTRIES</a>
+      <a class="nav-link text-light font-weight-bold px-3" href="/posts/ministries">MINISTRIES</a>
       </li>
     <li class="nav-item" >
     <a class="nav-link text-light font-weight-bold px-3" href="/posts/news">NEWS & EVENTS</a>
@@ -45,7 +46,7 @@
     </li>
     <li class="nav-item" >
     <a class="nav-link text-light font-weight-bold px-3" href="/admin">STAFF</a>
-    </li>
+    </li>    
     </ul>
     <form class="form-inline ml-3">
     <div class="input-group">
@@ -101,7 +102,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="/posts/news" style="text-decoration: none;">events</a>
+          <a href="/posts/news" style="text-decoration: none;">news & events</a>
         </h6>
       </div>
       <!-- Grid column -->
@@ -109,7 +110,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="/posts/contact" style="text-decoration: none;">Help</a>
+          <a href="/posts/ministries" style="text-decoration: none;">Ministries</a>
         </h6>
       </div>
       <!-- Grid column -->
@@ -117,7 +118,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="/posts/contact" style="text-decoration: none;">Contact</a>
+          <a href="/posts/contact" style="text-decoration: none;">Contact us</a>
         </h6>
       </div>
       <!-- Grid column -->
