@@ -7,9 +7,9 @@ urlpatterns = [
   url(r'^contact/$', views.contact, name='contact'),
   url(r'^news/$', views.news, name='news' ),
   url(r'^tenders/$', views.tenders, name='tenders' ),
-  url(r'^ministries/$', views.ministries, name='ministries' ),
   url(r'^services/$', views.services, name='services' ),
-
+  url(r'^ministries/$', views.ministries, name='ministries' ),
+  
   
 
 ]

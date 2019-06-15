@@ -1,14 +1,14 @@
 from django import forms
 MINISTRY = [
-    ('AGRIC AND LIVESTOCK', 'Agriculture And Livestock'),
-    ('ENVIRON AND NATURAL RESOURCES', 'Environment And Natural Resources'),
-    ('FINANCE AND ECONOMIC PLANNING', 'Finance And Economic Planning'),
-    ('HEALTH AND SANITATION', 'Health And Sanitaion'),
-    ('PHYSICAL PLANNING AND URBAN DEVELOPMENT', 'Physical Planning And Urban Development'),
-    ('ROAD TRANSPORT AND PUBLIC WORKS', 'Road Transport And Public Works'),
-    ('FINANCE AND ECONOMIC PLANNING', 'Finance And Economic Planning'),
-    ('TOURISM ARTS CULTURE AND SPORT', 'Tourism Arts Culture And Sport.'),
-    ('BUSINESS COOPERATIVES AND MARKETING', 'Business Cooperatives And Marketing'),
+   ('AGRIC AND LIVESTOCK', 'Agriculture And Livestock'),
+   ('ENVIRON AND NATURAL RESOURCES', 'Environment And Natural Resources'),
+   ('FINANCE AND ACCOUNTING', 'Finance And Accounting'),
+   ('HEALTH AND SERVICES', 'Health And Services'),
+   ('PHYSICAL PLANNING AND/HOUSING', 'Physical Planning And Housing'),
+   ('PUBLIC WORKS & UTILITIES', ' Public Works And Utilities'),
+   ('EDUCATION, CULTURE, SOCIAL', 'Education Culture And Social'),
+   ('TRADE, INDUSTRY DEV & REG', 'Trade Industry Dev & Reg'),
+   ('ROADS &TRANSPORT', 'Roads And Transport'),
 ]
 
 
@@ -27,3 +27,4 @@ class MinistryForm(forms.Form):
     email = forms.EmailField(max_length=254, required= True)
     subject = forms.CharField(max_length=254, required= True)
     message = forms.CharField( max_length=2000, widget=forms.Textarea(),help_text='Write here your message!')
+    
