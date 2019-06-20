@@ -1,0 +1,41 @@
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+<style>
+ .comment {
+margin: 20px 0px 20px 20px;
+}
+
+</style>
+<h3 class="center-align" style="margin-top:100px; color:#00BFF3;background-color: black;padding: 30px" >{{project.title}}</h3>
+<div class ="container" style="padding:100px">
+  
+    <img src="{{ project.images.url }}" alt="{{ project.title }}" width="900" height="500">
+</div>
+<div class="card">
+  <div class="card-content" style="padding: 30px">
+    {{project.body}}
+  </div>
+
+  <div class="card-action" style="padding: 30px">
+    {{project.created_at}}
+  </div>
+</div>
+</div>
+<div class = "container">
+
+    <hr>
+    
+    {% for comment in project.comments.all %}
+        <div class="comment">
+            <div class="date">{{ comment.created_date }}</div>
+            <strong>{{ comment.author }}</strong>
+            <p>{{ comment.text|linebreaks }}</p>
+        </div>
+    {% empty %}
+        <p>No comments here yet :(</p>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

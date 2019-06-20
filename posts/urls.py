@@ -9,6 +9,8 @@ urlpatterns = [
   url(r'^tenders/$', views.tenders, name='tenders' ),
   url(r'^services/$', views.services, name='services' ),
   url(r'^ministries/$', views.ministries, name='ministries' ),
+  url(r'^projects/$', views.projects, name='projects' ),
+  url(r'^review/(?P<id>\d+)/$', views.review, name='review'),
   
   
 

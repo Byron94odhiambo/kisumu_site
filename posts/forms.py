@@ -1,4 +1,5 @@
 from django import forms
+from .models import Projects, Comment
 MINISTRY = [
    ('AGRIC AND LIVESTOCK', 'Agriculture And Livestock'),
    ('ENVIRON AND NATURAL RESOURCES', 'Environment And Natural Resources'),
@@ -27,4 +28,10 @@ class MinistryForm(forms.Form):
     email = forms.EmailField(max_length=254, required= True)
     subject = forms.CharField(max_length=254, required= True)
     message = forms.CharField( max_length=2000, widget=forms.Textarea(),help_text='Write here your message!')
+
+class CommentForm(forms.ModelForm):
+
+    class Meta:
+        model = Comment
+        fields = ('author', 'text',)    
     

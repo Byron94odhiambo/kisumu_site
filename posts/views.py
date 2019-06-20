@@ -1,9 +1,10 @@
-from django.shortcuts import render
-from .models import Posts, Adverts
-from .forms import ContactForm, MinistryForm
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Posts, Adverts,Projects
+from .forms import ContactForm, MinistryForm,CommentForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.mail import send_mail
 from django.db.models import Q
+
 
 
 def index(request):
@@ -75,10 +76,6 @@ def tenders(request):
      return render(request, 'posts/tenders.html', context)
 
 
-
-
-
-
 def services(request):
 
   return render(request, 'posts/services.html')
@@ -102,4 +99,31 @@ def ministries(request):
    
 
   return render(request, 'posts/ministries.html', {'form': form,})
+
+
+
+def projects(request):
+   projects = Projects.objects.all().order_by('-created_at')[:3]
+
+   context = {
+    'title': 'Latest Projects',
+    'projects': projects
+   }
+     
+   return render(request, 'posts/projects.html', context)
+
+def review(request, id):
+
+  project = Projects.objects.get(id=id)
+
+  context = {
+    'project': project
+  }
+
+  return render(request, 'posts/review.html', context)
+
+
+
+
+
 

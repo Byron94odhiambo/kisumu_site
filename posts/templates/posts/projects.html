@@ -1,0 +1,41 @@
+{% extends 'posts/layout.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'posts/ksm.css' %}">
+
+
+
+
+{% block content %}
+
+
+<div class = "container">
+  <h4 style="color: #00BFF3; text-align: left; margin-top: 100px; padding: 30px; background-color: black;"> Projects</h4>
+</div>
+
+<div class ="grid-container" style = "margin-top:70px;margin-bottom: 50px;">
+  {% for project in projects %}
+
+<div class="card bg-info">
+<div class= "bg-img">
+      <img src="{{ project.images.url }}" alt="{{ project.title }}"width="355" height="200">
+  <div class="content">
+    
+    <p style="color: white;">{{project.author}}</p>
+    <p style="color: white;">{{project.created_at}}</p>
+    <br>
+
+    <a href="/posts/review/{{project.id}}" class="btn btn-primary" role="button">Readmore</a> </div>
+    <a href="{% url 'review' id=project.id %}">Reviews: {{ project.comments.count }}</a>
+
+</div>
+</div>
+
+  {%endfor%}
+
+
+  
+
+
+
+
+{% endblock%}
