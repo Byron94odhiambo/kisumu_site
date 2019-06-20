@@ -11,6 +11,7 @@ urlpatterns = [
   url(r'^ministries/$', views.ministries, name='ministries' ),
   url(r'^projects/$', views.projects, name='projects' ),
   url(r'^review/(?P<id>\d+)/$', views.review, name='review'),
+  url(r'project/(?P<id>\d+)/comment/$', views.add_comment_to_project, name='add_comment_to_project'),
   
   
 

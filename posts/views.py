@@ -123,7 +123,18 @@ def review(request, id):
   return render(request, 'posts/review.html', context)
 
 
-
+def add_comment_to_project(request, id):
+    project = get_object_or_404(Projects, id=id)
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.project = project
+            comment.save()
+            return redirect('review', id=project.id)
+    else:
+        form = CommentForm()
+    return render(request, 'posts/add_comment_to_project.html', {'form': form})
 
 
 

@@ -1,0 +1,11 @@
+{% extends 'posts/layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1 style="margin-top: 100px;">New comment</h1>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-primary">Send</button>
+    </form>
+{% endblock %}
