@@ -24,8 +24,12 @@
     <p style="color: white;">{{project.created_at}}</p>
     <br>
 
-    <a href="/posts/review/{{project.id}}" class="btn btn-primary" role="button">Readmore</a> </div>
-    <a href="{% url 'review' id=project.id %}">Reviews: {{ project.comments.count }}</a>
+    <a href="/posts/review/{{project.id}}" class="btn btn-primary" role="button">Follow Up</a> </div>
+   
+    
+   <a href="/posts/review/{{project.id}}"> <button type="button" class="btn btn-success" style="padding: 10px;">
+      Reviews <span class="badge badge-light">{{ project.comments.count }}</span>
+    </button></a>
 
 </div>
 </div>

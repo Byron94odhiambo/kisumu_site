@@ -16,7 +16,15 @@
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-top">
     
-    <a href="/" class="navbar-brand"><img src="{% static 'posts/images/logo.png' %}" style="width:250px;" ></a>
+    <a href="/"  data-toggle="tooltip" title="A prosperous and dynamic county that is a harbor of excellence
+
+    +254 773 456 711
+    Email: info@kisumu.go.ke
+    
+    Kisumu County
+    P.O. Box 2738 - 40100, KISUMU
+    
+    " data-placement="bottom" class="navbar-brand"><img src="{% static 'posts/images/logo.png' %}" style="width:250px;" ></a>
     <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -218,7 +226,11 @@
         document.documentElement.scrollTop = 0;
       }
       </script>
-
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+  });
+  </script>
 
 
 

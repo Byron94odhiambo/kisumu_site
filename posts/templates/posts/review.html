@@ -25,7 +25,7 @@ margin: 20px 0px 20px 20px;
 <div class = "container">
 
     <hr>
-    <a class="btn btn-default" href="{% url 'add_comment_to_project' id=project.id %}">Add comment</a>
+    <a class="btn btn-primary" href="{% url 'add_comment_to_project' id=project.id %}">Add comment</a>
     {% for comment in project.comments.all %}
         <div class="comment">
             <div class="date">{{ comment.created_date }}</div>
