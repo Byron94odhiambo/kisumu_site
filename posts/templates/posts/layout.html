@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'posts/ksm.css' %}">
   
   <title>Kisumu-County Kenya</title>
+  <link rel="icon" type="image/ico" href="{% static 'posts/images/logo.jpeg' %}" />
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-primary fixed-top">
@@ -31,14 +32,16 @@
     <div class="collapse navbar-collapse justify-content-between" id="nav">
     <ul class="navbar-nav">
     <li class="nav-item" >
+      
     <a class="nav-link text-light font-weight-bold px-3" href="/">HOME</a>
     </li>
     <li class="nav-item">
     <a class="nav-link text-light font-weight-bold px-3" href="/posts/tenders">TENDERS</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-light font-weight-bold px-3" href="{%url 'register'%}" id = nav>SERVICES</a>
+        <a class="nav-link text-light font-weight-bold px-3" href="{%url 'register'%}" id = nav>ONLINE SERVICES</a>
         </li>
+   
     <li class="nav-item">
       <a class="nav-link text-light font-weight-bold px-3" href="/posts/ministries">MINISTRIES</a>
       </li>
@@ -54,7 +57,17 @@
     </li>
     <li class="nav-item" >
     <a class="nav-link text-light font-weight-bold px-3" href="/admin">STAFF</a>
-    </li>    
+    </li>  
+    {% if user.is_authenticated %}
+    
+    <li class="nav-item">
+        <a class="nav-link text-light font-weight-bold px-3" href="{%url 'logout'%}" id = nav>LOGOUT</a>
+        </li>
+    
+    
+    
+    {% else %}
+    {% endif %}  
     </ul>
     <form class="form-inline ml-3">
     <div class="input-group">
@@ -104,7 +117,7 @@
       <!-- Grid column -->
       <div class="col-md-2 mb-3">
         <h6 class="text-uppercase font-weight-bold">
-          <a href="/posts/tenders" style="text-decoration: none;">services</a>
+          <a href="{%url 'register'%}" style="text-decoration: none;">services</a>
         </h6>
       </div>
       <!-- Grid column -->
