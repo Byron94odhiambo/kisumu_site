@@ -11,7 +11,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="{% static 'posts/ksm.css' %}">
   
-  <title>Kisumu-County Kenya</title>
+  <title>Kitui-County Kenya</title>
   <link rel="icon" type="image/ico" href="{% static 'posts/images/logo.jpeg' %}" />
 </head>
 <body>
@@ -31,10 +31,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="nav">
     <ul class="navbar-nav">
-    <li class="nav-item" >
-      
-    <a class="nav-link text-light font-weight-bold px-3" href="/">HOME</a>
-    </li>
+    
     <li class="nav-item">
     <a class="nav-link text-light font-weight-bold px-3" href="/posts/tenders">RESOURCES</a>
     </li>
@@ -42,9 +39,20 @@
         <a class="nav-link text-light font-weight-bold px-3" href="{%url 'register'%}" id = nav>ONLINE SERVICES</a>
         </li>
    
-    <li class="nav-item">
-      <a class="nav-link text-light font-weight-bold px-3" href="/posts/ministries">MINISTRIES</a>
-      </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light font-weight-bold px-3" data-toggle="dropdown" href="#">MINISTRIES</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/posts/projects">AGRICULTURE AND LIVESTOCK</a>
+            <a class="dropdown-item" href="/posts/news">ENVIRONMENT AND NATURAL RESOURCES</a>
+            <a class="dropdown-item" href="/posts/news">FINANCE AND ACCOUNTING</a>
+            <a class="dropdown-item" href="/posts/news">HEALTH AND SERVICES</a>
+            <a class="dropdown-item" href="/posts/news">PHYSICAL PLANNING AND HOUSING</a>
+            <a class="dropdown-item" href="/posts/news">PUBLIC WORK AND UTILITIES</a>
+            <a class="dropdown-item" href="/posts/news">EDUCATION CULTURE AND SOCIAL</a>
+            <a class="dropdown-item" href="/posts/news">TRADE INDUSTRY DEV AND REG </a>
+            <a class="dropdown-item" href="/posts/news">ROADS AND TRANSPORT</a>
+          </div>
+        </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-light font-weight-bold px-3" data-toggle="dropdown" href="#">NEWS & EVENTS</a>
         <div class="dropdown-menu">

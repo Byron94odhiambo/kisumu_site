@@ -2,6 +2,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+
   url(r'^$', views.index, name='index'),
   url(r'^details/(?P<id>\d+)/$', views.details, name='details'),
   url(r'^contact/$', views.contact, name='contact'),
@@ -13,6 +14,4 @@ urlpatterns = [
   url(r'^review/(?P<id>\d+)/$', views.review, name='review'),
   url(r'project/(?P<id>\d+)/comment/$', views.add_comment_to_project, name='add_comment_to_project'),
   
-  
-
 ]
