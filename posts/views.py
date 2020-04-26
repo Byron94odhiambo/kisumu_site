@@ -136,5 +136,11 @@ def add_comment_to_project(request, id):
         form = CommentForm()
     return render(request, 'posts/add_comment_to_project.html', {'form': form})
 
+def objectives(request):
+    return render (request, 'posts/objectives.html')
+
+def about_us(request):
+    return render(request,'posts/about_us.html')
+
 
 
